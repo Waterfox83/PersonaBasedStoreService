@@ -1,0 +1,69 @@
+[{
+       "Name": "Persona 1",
+       "Location": "L1",
+       "Categories": [{
+               "name": "Dresses",
+               "attributes": [{
+                       "name": "Silhouette",
+                       "value": ["Sheath", "Shift", "Trapeze"]
+                   },
+                   {
+                       "name": "Sleeve Length",
+                       "value": ["Sleeveless", "Long", "Short", "3/4 Sleeve"]
+                   },
+                   {
+                       "name": "Material",
+                       "value": ["Woven", "Knit", "Sweater"]
+                   }
+               ]
+           },
+           {
+               "name": "Denim",
+               "attributes": [{
+                       "name": "Rise",
+                       "value": ["Mid", "High", "Low"]
+                   },
+                   {
+                       "name": "Color",
+                       "value": ["Black", "Blue"]
+                   }
+               ]
+           }
+       ]
+   },
+   {
+       "Name": "Persona 2",
+       "Location": "L2",
+       "Categories": [{
+               "name": "Dresses",
+               "attributes": [{
+                       "name": "Silhouette",
+                       "value": ["Sheath", "Shift", "Trapeze"]
+                   },
+                   {
+                       "name": "Sleeve Length",
+                       "value": ["Sleeveless", "Long", "Short", "3/4 Sleeve"]
+                   },
+
+                   {
+                       "name": "Material",
+                       "value": ["Woven", "Knit", "Sweater"]
+                   }
+               ]
+           },
+           {
+               "name": "Denim",
+               "attributes": [{
+                       "name": "Rise",
+                       "value": ["Mid", "High", "Low"]
+                   },
+                   {
+                       "name": "Color",
+                       "value": ["Black", "Blue"]
+                   }
+               ]
+           }
+       ]
+
+   }
+]
