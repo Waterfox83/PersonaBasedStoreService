@@ -1,0 +1,138 @@
+[
+  {
+    "Name": "Persona 1",
+    "Location": "L1",
+    "Gender": "Female",
+    "Categories": [
+      {
+        "name": "Dress",
+        "attributes": [
+          {
+            "name": "Silhouette",
+            "value": [
+              "FitnFlare",
+              "Romper",
+              "Elastic waist"
+            ]
+          },
+          {
+            "name": "Sleeve Length",
+            "value": [
+              "Sleeveless"
+            ]
+          },
+          {
+            "name": "Material",
+            "value": [
+              "Woven"
+            ]
+          },
+          {
+            "name": "Price Band",
+            "value": [
+              "Better"
+            ]
+          },
+          {
+            "name": "Pattern Specific",
+            "value": [
+              "Ethnic",
+              "Floral"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Denim",
+        "attributes": [
+          {
+            "name": "Rise",
+            "value": [
+              "Mid",
+              "High"
+            ]
+          },
+          {
+            "name": "Color Group",
+            "value": [
+              ""
+            ]
+          },
+          {
+            "name": "Leg Shape",
+            "value": [
+              "Legging"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Persona 2",
+    "Location": "L2",
+    "Gender": "Female",
+    "Categories": [
+      {
+        "name": "Dresses",
+        "attributes": [
+          {
+            "name": "Silhouette",
+            "value": [
+              "Sheath"
+            ]
+          },
+          {
+            "name": "Sleeve Length",
+            "value": [
+              "short",
+              "sleeve",
+              "sleeveless"
+            ]
+          },
+          {
+            "name": "Material",
+            "value": [
+              "Knit"
+            ]
+          },
+          {
+            "name": "Price Band",
+            "value": [
+              "Better"
+            ]
+          },
+          {
+            "name": "Pattern Specific",
+            "value": [
+              "Solid"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Denim",
+        "attributes": [
+          {
+            "name": "Rise",
+            "value": [
+              "Mid"
+            ]
+          },
+          {
+            "name": "Color Group",
+            "value": [
+              "Black"
+            ]
+          },
+          {
+            "name": "Leg Shape",
+            "value": [
+              "Crops"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

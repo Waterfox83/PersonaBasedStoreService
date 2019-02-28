@@ -27,9 +27,9 @@ def get_categories(gender):
 @app.route('/api/v1/personas/<gender>')
 def get_personas(gender):
     # hardcoding the gender for the time being since our data is only for female category
-    gender = 'female';
+    file_name = 'personas_' + gender+'.json'
     print('Personas for %s' % gender)
-    js = open('static/json/personas.json').read()
+    js = open('static/json/' + file_name).read()
     resp = Response(js, status=200, mimetype='application/json')
     return resp
 
