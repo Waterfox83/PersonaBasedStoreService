@@ -1,29 +1,40 @@
 [{
-		"name": "Dresses",
+		"name": "Dresses for Females",
 		"attributes": [{
 				"name": "Silhouette",
-				"value": ["Sheath", "Shift", "Trapeze"]
+				"value": ["Sheath", "Shift", "Trapeze", "FitnFlare", "Romper", "Elastic waist"]
 			},
 			{
 				"name": "Sleeve Length",
-				"value": ["Sleeveless", "Long", "Short", "3/4 Sleeve"]
+				"value": ["Sleeveless", "Long", "Short Sleeve", "3/4 Sleeve"]
 			},
-
 			{
 				"name": "Material",
 				"value": ["Woven", "Knit", "Sweater"]
+			},
+			{
+				"name": "Price Band",
+				"value": ["Better","Good"]
+			},
+			{
+				"name": "Pattern Specific",
+				"value": ["Ethnic", "Floral", "Solid", "Stripe"]
 			}
 		]
 	},
 	{
-		"name": "Denim",
+		"name": "Denims for Females",
 		"attributes": [{
 				"name": "Rise",
-				"value": ["Mid", "High", "Low"]
+				"value": ["High","Mid","Low"]
 			},
 			{
-				"name": "Color",
-				"value": ["Black", "Blue"]
+				"name": "Color Group",
+				"value": ["Dark", "Medium", "Black", ""]
+			},
+			{
+				"name": "Leg Shape",
+				"value": ["Legging Crops", "Barely Boot", "Ankles Boot", "Skinny"]
 			}
 		]
 	}

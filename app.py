@@ -4,10 +4,9 @@ from Persona import Persona
 
 app = Flask(__name__)
 
-
-def __init__(self):
-    self.categories = ['dress', 'denim']
-    return
+segment_persona_map = {
+        "segment_0": "Persona 0", "segment_1": "Persona 1", "segment_2": "Persona 2", "segment_3": "Persona 3"
+    }
 
 
 @app.route('/')
@@ -37,29 +36,34 @@ def get_personas(gender):
 
 @app.route('/api/v1/personas/computed', methods=['POST'])
 def predict_persona():
-    json_string = request.get_json()
-    print(json_string)
-    return jsonify(json_string)
+    json_string = json.dumps(request.get_json())
+    json_dict = json.loads(json_string)
+    print(json_dict["gender"])
+    gender_value = json_dict["gender"]
+    selected_attributes = json_dict["selectedAttributes"]
+    selected_attributes_category = selected_attributes["name"]
+    selected_attributes_array = selected_attributes["attributes"]
 
-    # input_request_object = json.loads(json_string)
-    # return input_request_object['selectedAttributes']
+    param_dict = {}
 
-    # return 'Computed persona'
+    for x in selected_attributes_array:
+        print ('name %s' % x["name"])
+        print ('value %s' % x["value"])
+        param_dict[x["name"]] = x["value"][0]
+
+    print(gender_value + " " + selected_attributes_category)
+    print (param_dict)
+
+    return calculate_persona(param_dict)
 
 
-@app.route('/api/v1/test', methods=['GET'])
-def dummy():
-    paramdict = {'Attribute_material': 'knit',
-                 'Attribute_sleeve_length': 'long',
-                 'Attribute_silhouette': 'sheath',
-                 'Attribute_pattern_specific': 'ethnic',
-                 'Attribute_price_band': 'best'}
-
+def calculate_persona(param_dict):
     obj = Persona()
     obj.load_model('computation/segment_params.txt', 'computation/segment_predictions.csv')
-    print(obj.predict_persona(paramdict))
-    return 'success'
-    # print(obj.segmentAffinities('segment_0'))
+    predicted_persona = obj.predict_persona(param_dict)
+    print('Predicted Persona %s' % predicted_persona)
+    persona = predicted_persona.pop()
+    return segment_persona_map[persona]
 
 
 if __name__ == '__main__':
