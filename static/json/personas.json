@@ -2,6 +2,7 @@
   {
     "Name": "Persona 1",
     "Location": "L1",
+    "Gender": "Female",
     "Categories": [
       {
         "name": "Dress",
@@ -52,12 +53,6 @@
             ]
           },
           {
-            "name": "Color Group",
-            "value": [
-              ""
-            ]
-          },
-          {
             "name": "Leg Shape",
             "value": [
               "Legging"
@@ -70,6 +65,7 @@
   {
     "Name": "Persona 2",
     "Location": "L2",
+    "Gender": "Female",
     "Categories": [
       {
         "name": "Dresses",
@@ -83,9 +79,8 @@
           {
             "name": "Sleeve Length",
             "value": [
-              "short",
-              "sleeve",
-              "sleeveless"
+              "Short Sleeve",
+              "Sleeveless"
             ]
           },
           {
@@ -136,6 +131,7 @@
   {
     "Name": "Persona 3",
     "Location": "L3",
+    "Gender": "Male",
     "Categories": [
       {
         "name": "Dresses",
@@ -149,9 +145,8 @@
           {
             "name": "Sleeve Length",
             "value": [
-              "short",
-              "sleeve",
-              "sleeveless"
+              "Short Sleeve",
+              "Sleeveless"
             ]
           },
           {
@@ -203,6 +198,7 @@
   {
     "Name": "Persona 4",
     "Location": "L4",
+    "Gender": "Male",
     "Categories": [
       {
         "name": "Dresses",

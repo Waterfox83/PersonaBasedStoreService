@@ -53,12 +53,6 @@
             ]
           },
           {
-            "name": "Color Group",
-            "value": [
-              ""
-            ]
-          },
-          {
             "name": "Leg Shape",
             "value": [
               "Legging"
@@ -85,9 +79,8 @@
           {
             "name": "Sleeve Length",
             "value": [
-              "short",
-              "sleeve",
-              "sleeveless"
+              "Short Sleeve",
+              "Sleeveless"
             ]
           },
           {
@@ -129,6 +122,141 @@
             "name": "Leg Shape",
             "value": [
               "Crops"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Persona 3",
+    "Location": "L3",
+    "Gender": "Male",
+    "Categories": [
+      {
+        "name": "Dresses",
+        "attributes": [
+          {
+            "name": "Silhouette",
+            "value": [
+              "Sheath"
+            ]
+          },
+          {
+            "name": "Sleeve Length",
+            "value": [
+              "Short Sleeve",
+              "Sleeveless"
+            ]
+          },
+          {
+            "name": "Material",
+            "value": [
+              "Sweater"
+            ]
+          },
+          {
+            "name": "Price Band",
+            "value": [
+              "Better"
+            ]
+          },
+          {
+            "name": "Pattern Specific",
+            "value": [
+              "Solid"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Denim",
+        "attributes": [
+          {
+            "name": "Rise",
+            "value": [
+              "Low"
+            ]
+          },
+          {
+            "name": "Color Group",
+            "value": [
+              "Dark"
+            ]
+          },
+          {
+            "name": "Leg Shape",
+            "value": [
+              "Barely boot",
+              "Ankles"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Persona 4",
+    "Location": "L4",
+    "Gender": "Male",
+    "Categories": [
+      {
+        "name": "Dresses",
+        "attributes": [
+          {
+            "name": "Silhouette",
+            "value": [
+              "Trapeze"
+            ]
+          },
+          {
+            "name": "Sleeve Length",
+            "value": [
+              "3/4 Sleeve"
+            ]
+          },
+          {
+            "name": "Material",
+            "value": [
+              "Knit"
+            ]
+          },
+          {
+            "name": "Price Band",
+            "value": [
+              "Good"
+            ]
+          },
+          {
+            "name": "Pattern Specific",
+            "value": [
+              "Solid",
+              "Stripe"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Denim",
+        "attributes": [
+          {
+            "name": "Rise",
+            "value": [
+              "Low"
+            ]
+          },
+          {
+            "name": "Color Group",
+            "value": [
+              "Medium"
+            ]
+          },
+          {
+            "name": "Leg Shape",
+            "value": [
+              "Boot",
+              "Barely boot",
+              "Skinny"
             ]
           }
         ]
