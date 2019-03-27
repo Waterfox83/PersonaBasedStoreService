@@ -1,6 +1,7 @@
 [
   {
-    "Name": "Persona 1",
+    "Name": "Bohemian",
+    "Description": "The best way to describe bohemian would be to use the word non-traditional. A style which is similar to arty, bohemian style uses extravagant and wild patterns on exotic textures",
     "Location": "L1",
     "Gender": "Female",
     "Categories": [
@@ -63,7 +64,8 @@
     ]
   },
   {
-    "Name": "Persona 2",
+    "Name": "Chic",
+    "Description": "Chic is characterized by being trendy and fashionable. It is a type of statement to make oneself look smart and striking. Whoever follows this style makes sure to choose well-tailored stylish designs that are pretty classy.",
     "Location": "L2",
     "Gender": "Female",
     "Categories": [
@@ -129,7 +131,8 @@
     ]
   },
   {
-    "Name": "Persona 3",
+    "Name": "Sophisticated",
+    "Description": "Sophisticated can be characterized as businesswoman minus the formal look. Culture and luxury mean the most to the people who choose this style of fashion. They often look for styles that make a statement on the quality, polished manner and culture.",
     "Location": "L3",
     "Gender": "Male",
     "Categories": [
@@ -196,7 +199,8 @@
     ]
   },
   {
-    "Name": "Persona 4",
+    "Name": "Artsy",
+    "Description": "Artsy are usually the ones who want to make a statement of their own by the clothes they wear. They do not follow the traditional norms and make the path for themselves. The unconventional for of art leads to innovating very many interesting forms of trends which are not restricted by the usual textbook nature of creating fashion.",
     "Location": "L4",
     "Gender": "Male",
     "Categories": [

@@ -59,7 +59,7 @@ def predict_persona():
 def calculate_persona(param_dict, selected_attributes_category):
     obj = Persona()
 
-    if selected_attributes_category == 'Dresses for Females':
+    if selected_attributes_category == 'Dresses for Women':
         obj.load_model('computation/segment_params.txt', 'computation/segment_predictions.csv')
     elif selected_attributes_category == 'Denims for Women':
         obj.load_model('computation/segment_params_denim.txt', 'computation/segment_predictions_denim.csv')
