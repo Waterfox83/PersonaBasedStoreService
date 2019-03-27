@@ -49,21 +49,37 @@ def predict_persona():
     for x in selected_attributes_array:
         print ('name %s' % x["name"])
         print ('value %s' % x["value"])
-        param_dict[x["name"]] = x["value"][0]
+        param_dict['Attribute_' + (x["name"].lower()).replace(' ','_')] = x["value"][0]
 
     print(gender_value + " " + selected_attributes_category)
-    print (param_dict)
 
-    return calculate_persona(param_dict)
+    return Response(calculate_persona(param_dict, selected_attributes_category), status=200, mimetype='application/json')
 
 
-def calculate_persona(param_dict):
+def calculate_persona(param_dict, selected_attributes_category):
     obj = Persona()
-    obj.load_model('computation/segment_params.txt', 'computation/segment_predictions.csv')
+
+    if selected_attributes_category == 'Dresses for Females':
+        obj.load_model('computation/segment_params.txt', 'computation/segment_predictions.csv')
+    elif selected_attributes_category == 'Denims for Women':
+        obj.load_model('computation/segment_params_denim.txt', 'computation/segment_predictions_denim.csv')
+
     predicted_persona = obj.predict_persona(param_dict)
     print('Predicted Persona %s' % predicted_persona)
     persona = predicted_persona.pop()
-    return segment_persona_map[persona]
+    persona_name = segment_persona_map[persona]
+    print ('Computed Persona: %s' % persona_name)
+
+    index_of_space = persona_name.index(' ')
+    index_of_number = int(persona_name[index_of_space+1:]) - 1
+
+    file_name = 'personas_female.json'
+    js = open('static/json/' + file_name).read()
+
+    personas_list = json.loads(js)
+    return json.dumps(personas_list[index_of_number])
+
+
 
 
 if __name__ == '__main__':

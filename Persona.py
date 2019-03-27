@@ -6,11 +6,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 class Persona:
 
-    def __init__(self):
+    def __init__(self, department='dresses'):
         self.loaded = False
-        self.segment_params = None
-        self.custpred = None
+        self.department = department
+        # self.segment_params = None
+        # self.custpred = None
         return
+
+    def department(self):
+        return self.department
 
     def segment_affinities(self, seg_label):
         # get the characteristics/attribute preferences of the segment (seg_label)
@@ -26,7 +30,7 @@ class Persona:
 
         self.segment_params = pickle.load(open(segment_param_file, 'rb'))
 
-        self.custpred = pd.read_csv(attribute_alloc_file)
+        self.custpred = pd.read_csv(attribute_alloc_file, index_col=False, dtype={'segment_label':str})
         self.loaded = True
         return
 
@@ -38,7 +42,7 @@ class Persona:
 
         cols = []
         for k, v in param_dict.items():
-            cols.append(k + '__' + v)
+            cols.append(k+'__'+v.lower().replace(' ', '_').replace('/', '_'))
 
         fill_values = np.ones((len(cols), 1)).transpose()
 
