@@ -8,9 +8,9 @@ app = Flask(__name__)
 segment_persona_map = {
         "segment_0": "Persona 0", "segment_1": "Persona 1", "segment_2": "Persona 2", "segment_3": "Persona 3"
     }
-account_sid = 'ACf110c27c2ce1bcbfb1d45860efc81be3'
-auth_token = 'd2c140b71e87af652890b41a1467311c'
-whatsapp_sender = 'whatsapp:+14155238886'
+account_sid = '<twilio account_sid>'
+auth_token = '<twilio auth_token>'
+whatsapp_sender = 'whatsapp:<twilio number>'
 
 @app.route('/')
 def hello_world():
