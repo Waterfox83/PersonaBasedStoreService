@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for, request, jsonify, json, Response
+from twilio.rest import Client
 
 from Persona import Persona
 
@@ -7,11 +8,35 @@ app = Flask(__name__)
 segment_persona_map = {
         "segment_0": "Persona 0", "segment_1": "Persona 1", "segment_2": "Persona 2", "segment_3": "Persona 3"
     }
-
+account_sid = 'ACf110c27c2ce1bcbfb1d45860efc81be3'
+auth_token = 'd2c140b71e87af652890b41a1467311c'
+whatsapp_sender = 'whatsapp:+14155238886'
 
 @app.route('/')
 def hello_world():
     return 'Welcome to Persona Based Store Service!'
+
+
+@app.route('/api/v1/sendMessage', methods=['POST'])
+def send_message():
+    json_string = json.dumps(request.get_json())
+    json_dict = json.loads(json_string)
+
+    phone_number = 'whatsapp:' + json_dict['phoneNumber']
+    location = json_dict['location']
+    persona_name = json_dict['personaName']
+    result_summary = 'Your persona is ' + persona_name + ' . Please head to ' + location + ' to enjoy the collection '
+    'curate according to your taste. Happy shopping!'
+
+    client = Client(account_sid, auth_token)
+
+    message = client.messages.create(
+        from_=whatsapp_sender,
+        body=result_summary,
+        to=phone_number
+    )
+
+    return Response(message.sid, status=200, mimetype='application/json')
 
 
 @app.route('/api/v1/categories/<gender>')
@@ -49,7 +74,8 @@ def predict_persona():
     for x in selected_attributes_array:
         print ('name %s' % x["name"])
         print ('value %s' % x["value"])
-        param_dict['Attribute_' + (x["name"].lower()).replace(' ','_')] = x["value"][0]
+        if len(x["value"]) != 0:
+            param_dict['Attribute_' + (x["name"].lower()).replace(' ','_')] = x["value"][0]
 
     print(gender_value + " " + selected_attributes_category)
 
@@ -64,23 +90,25 @@ def calculate_persona(param_dict, selected_attributes_category):
     elif selected_attributes_category == 'Denims for Women':
         obj.load_model('computation/segment_params_denim.txt', 'computation/segment_predictions_denim.csv')
 
-    predicted_persona = obj.predict_persona(param_dict)
-    print('Predicted Persona %s' % predicted_persona)
-    persona = predicted_persona.pop()
-    persona_name = segment_persona_map[persona]
-    print ('Computed Persona: %s' % persona_name)
-
-    index_of_space = persona_name.index(' ')
-    index_of_number = int(persona_name[index_of_space+1:]) - 1
-
     file_name = 'personas_female.json'
     js = open('static/json/' + file_name).read()
-
     personas_list = json.loads(js)
-    return json.dumps(personas_list[index_of_number])
 
+    results_list = personas_list
 
+    if len(param_dict) != 0:
+        predicted_persona = obj.predict_persona(param_dict)
+        print('Predicted Persona %s' % predicted_persona)
+        persona = predicted_persona.pop()
+        persona_name = segment_persona_map[persona]
+        print ('Computed Persona: %s' % persona_name)
 
+        index_of_space = persona_name.index(' ')
+        persona_id = int(persona_name[index_of_space+1:])
+        results_list = personas_list[persona_id:persona_id+1]
+
+    return json.dumps(results_list)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
+

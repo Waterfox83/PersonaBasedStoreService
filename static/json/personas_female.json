@@ -65,7 +65,7 @@
   },
   {
     "Name": "Chic",
-    "Description": "Chic is characterized by being trendy and fashionable. It is a type of statement to make oneself look smart and striking. Whoever follows this style makes sure to choose well-tailored stylish designs that are pretty classy.",
+    "Description": "Chic is characterized by being trendy and fashionable. It is a type of statement to make oneself look smart and striking by choosing well-tailored stylish designs that are pretty classy.",
     "Location": "L2",
     "Gender": "Female",
     "Categories": [
@@ -132,7 +132,7 @@
   },
   {
     "Name": "Sophisticated",
-    "Description": "Sophisticated can be characterized as businesswoman minus the formal look. Culture and luxury mean the most to the people who choose this style of fashion. They often look for styles that make a statement on the quality, polished manner and culture.",
+    "Description": "Sophisticated can be characterized as business person minus the formal look. They often look for cultural and luxurious styles that make a statement on the quality, polished manner and culture.",
     "Location": "L3",
     "Gender": "Male",
     "Categories": [
