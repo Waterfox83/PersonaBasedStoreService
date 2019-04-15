@@ -247,3 +247,7 @@ POST: /api/v1/personas
  }
 ]
 ````
+
+## How to run?
+
+python -m flask run
