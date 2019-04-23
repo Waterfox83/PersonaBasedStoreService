@@ -251,3 +251,17 @@ POST: /api/v1/personas
 ## How to run?
 
 python -m flask run
+
+## How to deploy?
+
+This was deployed as a Docker image on an Azure Web App. Here are the steps:
+
+  docker build --tag <docker user name>/personastore-flask-webapp:v1.0.0 .
+  
+  docker login --username=<docker user name>
+  
+  docker push waterfox83/personastore-flask-webapp:v1.0.0
+  
+  az webapp create --resource-group <azure resource group> --plan <azure service plan> --name <azure webapp name> --deployment-container-image-name <docker user name>/personastore-flask-webapp:v1.0.0
+  
+  az webapp config appsettings set --resource-group <azure resource group> --name <azure webapp name> --settings WEBSITES_PORT=5000
