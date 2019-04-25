@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: personabasedstoreservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: personabasedstoreservice
+    spec:
+      containers:
+      - name: personabasedstoreservice
+        image: pbrscontainerregistry.azurecr.io/personastore-flask-webapp:v1
+        imagePullPolicy: Always
+        ports:
+           - name: http
+             containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: personabasedstoreservice
+ annotations:
+  #  service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+ labels:
+   app: personabasedstoreservice
+spec:
+ type: LoadBalancer
+ selector:
+   app: personabasedstoreservice
+ ports:
+  - name: http
+    port: 5000
+    targetPort: 5000
