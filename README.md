@@ -265,3 +265,6 @@ This was deployed as a Docker image on an Azure Web App. Here are the steps:
   az webapp create --resource-group <azure resource group> --plan <azure service plan> --name <azure webapp name> --deployment-container-image-name <docker user name>/personastore-flask-webapp:v1.0.0
   
   az webapp config appsettings set --resource-group <azure resource group> --name <azure webapp name> --settings WEBSITES_PORT=5000
+
+
+This is now deployed on Kubernetes cluster on Abhishek's azure account. Available here: http://104.211.223.150:5000/
