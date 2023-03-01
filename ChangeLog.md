@@ -16,3 +16,6 @@
  * Added logging to controller method.
  ## 2023-03-01 19:24:34
  * This pull request adds a new feature for user authentication, which simplifies the registration process and increases the options for users to log in to our platform, with thorough testing and documentation included.
+
+ ## 2023-03-01 14:00:46
+ * This pull request adds a feature to allow users to log in with their email address.\n\nThis pull request adds a feature to allow users to log in with their email address.
