@@ -19,3 +19,6 @@
 
  ## 2023-03-01 14:00:46
  * This pull request adds a feature to allow users to log in with their email address.\n\nThis pull request adds a feature to allow users to log in with their email address.
+
+ ## 2023-03-02 15:37:29
+ * Request to fix issue with \Some null\.
