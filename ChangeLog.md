@@ -20,3 +20,6 @@
  ## 2023-03-01 14:00:46
  * This pull request adds a feature to allow users to log in with their email address.\n\nThis pull request adds a feature to allow users to log in with their email address.
 
+
+ ## 2023-03-03 18:43:14
+ * This pull request adds a new feature for user authentication, allowing users to log in to our platform using their social media accounts, with thorough testing and documentation.
