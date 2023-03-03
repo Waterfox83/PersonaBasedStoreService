@@ -8,4 +8,4 @@
 * Added some more stuff.
 
 ## 2023-03-01 18:38:06
-* Added even more stuff.
+* Added some more stuff.
